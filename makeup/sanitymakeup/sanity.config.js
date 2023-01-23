@@ -1,13 +1,13 @@
 import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
-import {schemaTypes} from './schemas'
+import {schemaTypes} from './schemas/index'
 
 export default defineConfig({
   name: 'default',
-  title: 'sanity_makeup',
+  title: 'sanitymakeup',
 
-  projectId: 'zh1n0qmk',
+  projectId: 'zt7vpa4x',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool()],
