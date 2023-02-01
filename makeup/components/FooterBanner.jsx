@@ -30,7 +30,7 @@ smallText, midText, desc, product, buttonText, image}}) => {
       
       
       
-      FooterBanner</div>
+   </div>
   )
 }
 
