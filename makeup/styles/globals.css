@@ -71,6 +71,44 @@ width: 100%;
   font-weight:bold;
 
 }
+.ifo-icon{
+  font-size: 25px;
+  color: gray;
+  cursor: pointer;
+  position: relative;
+  transition: transform .4s ease;
+  border: none;
+  background-color: transparent;
+  /* margin-right: auto; */
+  margin-left: auto;
+  /* margin: auto; */
+
+}
+.ifo-icon:hover{
+  transform: scale(1.1,1.1);
+}
+.pro-icon {
+  font-size: 25px;
+  color: gray;
+  cursor: pointer;
+  position:relative;
+  transition: transform .4s ease;
+  border: none;
+  background-color: transparent;
+  /* left:305px;  */
+  /* we have to edit the leftpixels */
+  
+ 
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+ 
+
+}
+.pro-icon:hover{
+  transform: scale(1.1,1.1);
+}
+
+
 .cart-icon{
   font-size: 25px;
   color: gray;
@@ -132,7 +170,7 @@ width: 100%;
 
 .hero-banner-container{
   padding: 100px 40px;
-  background-color: #dcdcdc;
+  background-color: #d8cfcf;
   border-radius: 15px;
   position: relative;
   height: 500px;
