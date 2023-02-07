@@ -58,13 +58,42 @@ export const StateContext = ({children}) => {
 
     }
 
+    const onRemove = (product) => {
+        foundProduct = cartitems.find((item) => item._id === product._id);
+        const newCartItems = cartitems.filter((item) => item._id !== product._id)
+        settotalprice ((prevtotalprice) => prevtotalprice - 
+        foundProduct.price * foundProduct.quantity);
+        settotalquantities((prevtotalquantities) => prevtotalquantities - foundProduct.quantity);
+        setcartitems(newCartItems);      
+
+
+
+
+
+
+    }
+
     const toggelCartItemQuanity =(id, value) => {
         foundProduct = cartitems.find((item) => item._id === id)
         index = cartitems.findIndex((product) => product._id === id);
 
+        const newCartItems = cartitems.filter((item) => item._id !== id)
+        if (value === 'inc'){
+         setcartitems([...newCartItems, {...foundProduct, 
+                    quantity: foundProduct.quantity + 1 }]);
+          settotalprice ((prevtotalprice) => prevtotalprice + foundProduct.price);
+          settotalquantities((prevtotalquantities) => prevtotalquantities + 1)      
+        }
 
+        else if (value === 'dec'){
+            if(foundProduct.quantity > 1){
+                setcartitems([...newCartItems, {...foundProduct, 
+                    quantity: foundProduct.quantity - 1 }]);
+                settotalprice ((prevtotalprice) => prevtotalprice - foundProduct.price);
+                settotalquantities((prevtotalquantities) => prevtotalquantities - 1)     
 
-
+            }
+        }
     }
 
 
@@ -94,7 +123,9 @@ export const StateContext = ({children}) => {
         qty,
         inQty,
         decQty,
-        onAdd
+        onAdd,
+        toggelCartItemQuanity,
+        onRemove
         }}
        >
         {children}
