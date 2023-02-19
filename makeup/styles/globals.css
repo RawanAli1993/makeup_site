@@ -29,7 +29,7 @@ width: 100%;
 .navbar-container{
   display: flex;
   justify-content: space-between;
-  margin: 6px 18px;
+  /* margin: 5px 18px; */
   position: relative;
 }
 .marquee-text{
@@ -65,10 +65,11 @@ width: 100%;
     margin-left: 6px;
 }
 .logo{
-  color: rgb(77, 75, 75);
+  /* color: rgb(77, 75, 75);
   font-size: 23px;
   font-style:oblique;
-  font-weight:bold;
+  font-weight:bold; */
+  /* margin-top: 10px; */
 
 }
 .ifo-icon{

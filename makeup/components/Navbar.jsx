@@ -11,9 +11,9 @@ const Navbar = () => {
     <div className='navbar-container'>
       <p className='logo'>
         <Link href='/'>
-          <img src=''/>
+          <img src='https://github.com/RawanAli1993/makeup_site/blob/master/makeup/logoshop.png?raw=true'/>
 
-          Rawan Beauty Shop</Link>
+          </Link>
       </p>
 {/*       
       <button type='button' className='pro-icon' onClick=''>
