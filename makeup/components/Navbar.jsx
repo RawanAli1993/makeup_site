@@ -10,7 +10,10 @@ const Navbar = () => {
   return (
     <div className='navbar-container'>
       <p className='logo'>
-        <Link href='/'>Rawan Beauty Shop</Link>
+        <Link href='/'>
+          <img src=''/>
+
+          Rawan Beauty Shop</Link>
       </p>
 {/*       
       <button type='button' className='pro-icon' onClick=''>

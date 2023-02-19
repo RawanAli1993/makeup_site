@@ -105,7 +105,7 @@ const Cart = () => {
                 <h3> ${totalprice}</h3>
                 </div>
                 <div className='btn-container'>
-                  <button type='button' className='btn' onClick={handelCheckout}>
+                  <button type='button' className='btn' onClick= {handelCheckout}>
                     Pay with Stripe
                   </button>
                   </div>
