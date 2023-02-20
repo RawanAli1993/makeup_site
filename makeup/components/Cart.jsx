@@ -15,9 +15,9 @@ const Cart = () => {
 
   const handelCheckout = async () => {
 
-    
     const stripe = await getStripe();
-    const response = await fetch('/api/stripe', {
+   
+    const response = await fetch('api/stripe', {
       method: 'POST',
       headers:{
         'Content-Type': 'application/json',
@@ -26,6 +26,7 @@ const Cart = () => {
     });
 
     if(response.statusCode === 500) return;
+    // else { console.log("notr");}
     const data = await response.json();
 
     toast.loading('Redirecting...');
