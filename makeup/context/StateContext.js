@@ -23,7 +23,7 @@ export const StateContext = ({children}) => {
     const [qty, setqty] = useState (1);
 
     let foundProduct ;
-    let index;
+    // let index;
 
     
     const onAdd = (product, quantity) => {
@@ -50,11 +50,13 @@ export const StateContext = ({children}) => {
             product.quantity = quantity;
             setcartitems([...cartitems, {...product}]);
 
-            toast.success(`${qty} ${product.name} added to the cart successfuly`);
 
 
 
         }
+        toast.success(`${qty} ${product.name} added to the cart successfuly`);
+
+         return (setqty(1));
 
     }
 
@@ -74,26 +76,46 @@ export const StateContext = ({children}) => {
     }
 
     const toggelCartItemQuanity =(id, value) => {
+    
         foundProduct = cartitems.find((item) => item._id === id)
-        index = cartitems.findIndex((product) => product._id === id);
+        // index = cartitems.findIndex((product) => product._id === id);
 
-        const newCartItems = cartitems.filter((item) => item._id !== id)
+        // const newCartItems = cartitems.filter((item) => item._id !== id)
+
+
+
+
         if (value === 'inc'){
-         setcartitems([...newCartItems, {...foundProduct, 
-                    quantity: foundProduct.quantity + 1 }]);
+        //  setcartitems([...newCartItems, {...foundProduct, 
+        //             quantity: foundProduct.quantity + 1 }]);
+        const updatedData = cartitems.map(item => (item._id === id ? { 
+            ...item, quantity: item.quantity + 1 } : item));
+         setcartitems(updatedData)
+
+
           settotalprice ((prevtotalprice) => prevtotalprice + foundProduct.price);
-          settotalquantities((prevtotalquantities) => prevtotalquantities + 1)      
+          settotalquantities((prevtotalquantities) => prevtotalquantities + 1)  
+              
         }
 
         else if (value === 'dec'){
             if(foundProduct.quantity > 1){
-                setcartitems([...newCartItems, {...foundProduct, 
-                    quantity: foundProduct.quantity - 1 }]);
+                // setcartitems([...newCartItems, {...foundProduct, 
+                //     quantity: foundProduct.quantity - 1 }]);
+
+
+
+                const updatedData = cartitems.map(item => (item._id === id ? { 
+                    ...item, quantity: item.quantity - 1 } : item));
+                      setcartitems(updatedData);
+
+
                 settotalprice ((prevtotalprice) => prevtotalprice - foundProduct.price);
                 settotalquantities((prevtotalquantities) => prevtotalquantities - 1)     
 
             }
         }
+        
     }
 
 

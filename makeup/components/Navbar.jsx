@@ -15,18 +15,21 @@ const Navbar = () => {
 
           </Link>
       </p>
-{/*       
+
+
+    
+      <button type='button' className='ifo-icon' onClick=''>
+      <AiOutlineExclamationCircle /></button>
+
+
+            
       <button type='button' className='pro-icon' onClick=''>
       
-       <AiOutlinePhone />
+       <AiOutlinePhone /></button>
 
-      </button> */}
-
-{/*     
-      <button type='button' className='ifo-icon' onClick=''>
-      <AiOutlineExclamationCircle />
+    
       
-      </button> */}
+      
       <button type='button' className='cart-icon' 
       onClick={() => setshowcart(true)} >
 

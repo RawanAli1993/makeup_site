@@ -74,7 +74,7 @@ const Cart = () => {
                   </div>
                   <div className='flex bottom'>
                     <div>
-                    <p className='quantity-desc'>
+                    <p className='quantity-desc'> 
                     <span className='minus' onClick={() => toggelCartItemQuanity (item._id, 'dec')}>
                         <AiOutlineMinus />
                     </span>
